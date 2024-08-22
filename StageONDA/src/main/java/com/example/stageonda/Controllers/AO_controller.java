@@ -19,4 +19,5 @@ public class AO_controller {
         public List<Seance> Amine(){
             return aoServiceImp.Select_AO_ID(1L).get().Seances;
         }
+
 }
