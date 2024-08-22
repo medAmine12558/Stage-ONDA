@@ -26,13 +26,13 @@ public class AO_Service_Imp implements AO_Service {
     public AO Update_AO_ID(Long id,AO ao) {
         AO ao1=aoRepo.findById(id).get();
         if(ao1 != null){
-            ao1.Descrip=ao.Descrip;
-            ao1.Objet=ao.Objet;
-            ao1.date=ao.date;
-            ao1.Prix=ao.Prix;
-            ao1.utilisateur=ao.utilisateur;
-            ao1.Seances=ao.Seances;
-            ao1.contrat=ao.contrat;
+            ao1.setDescrip(ao.getDescrip());
+            ao1.setObjet(ao.getObjet());
+            ao1.setDate(ao.getDate());
+            ao1.setPrix(ao.getPrix());
+            ao1.setUtilisateur(ao.getUtilisateur());
+            ao1.setSeances(ao.getSeances());
+            ao1.setContrat(ao.getContrat());
             return aoRepo.save(ao1);
         }
         return null;

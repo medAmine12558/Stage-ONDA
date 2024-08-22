@@ -1,6 +1,7 @@
 package com.example.stageonda.Controllers;
 
 
+import com.example.stageonda.Entities.AO;
 import com.example.stageonda.Entities.Seance;
 
 import com.example.stageonda.Services.AO_Service_Imp;
@@ -16,11 +17,9 @@ public class AO_controller {
     AO_Service_Imp aoServiceImp;
 
     @GetMapping("/Amine")
-        public List<Seance> Amine(){
-        if(aoServiceImp.Select_AO_ID(1L).isPresent())
-            return aoServiceImp.Select_AO_ID(1L).get().Seances;
-        else
-            return null;
+        public AO Amine(){
+            return aoServiceImp.Select_AO_ID(1L).get();
+
 
         }
 

@@ -1,9 +1,7 @@
 package com.example.stageonda.Entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -11,20 +9,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Entity  @NoArgsConstructor @AllArgsConstructor @Data
+@Entity  @NoArgsConstructor @AllArgsConstructor
 public class AO {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
-    public String Descrip,Objet;
-    public Float Prix;
+    private Long id;
+    @Getter @Setter
+    private String Descrip,Objet;
+    @Getter @Setter
+    private Float Prix;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    public LocalDate date;
+    @Getter @Setter
+    private LocalDate date;
     @ManyToOne(cascade = CascadeType.MERGE)
-    public Utilisateur utilisateur;
+    @Getter @Setter
+    private Utilisateur utilisateur;
     @OneToMany(mappedBy = "ao" , cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
-    public List<Seance> Seances=new ArrayList<>();
+    @Getter @Setter
+    private List<Seance> Seances=new ArrayList<>();
     @OneToOne(cascade = CascadeType.MERGE)
-    public Contrat contrat;
+    @Getter @Setter
+    private Contrat contrat;
     @OneToMany(mappedBy = "ao")
+    @Getter @Setter
     private List<FournisseurAO> fournisseurAOs;
 }

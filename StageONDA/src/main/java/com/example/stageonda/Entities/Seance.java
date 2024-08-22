@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
-@Entity @AllArgsConstructor @NoArgsConstructor @Data
+@Entity @AllArgsConstructor @NoArgsConstructor
 public class Seance {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
