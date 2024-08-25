@@ -12,6 +12,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
+import { Block } from '@mui/icons-material';
 
 
 
@@ -110,10 +112,58 @@ console.log(AO)
         </div>
         <div className="content">
           <div className="info">
-            <p>{AO.descrip}</p>
-            <p><span>Objet :</span> {AO.objet}</p>
-            <p><span>Date de création :</span> {AO.date}</p>
-            <p><span>Prix :</span> {AO.prix} DHS</p>
+            <p style={{ display: 'inline', alignItems: 'center' }}>{AO.descrip}</p>
+            <Button
+    variant="contained"
+    color="primary"
+    size="small"
+    style={{
+      marginLeft: 10, // add some margin to separate from the label
+    }}
+  >
+    <EditIcon />
+    Edit
+  </Button>
+            <p  style={{ display: 'inline', alignItems: 'center' }}><span>Objet :</span> {AO.objet}</p> 
+            <Button
+    variant="contained"
+    color="primary"
+    size="small"
+    style={{
+      marginLeft: 10, // add some margin to separate from the label
+    }}
+  >
+    <EditIcon />
+    Edit
+  </Button>
+  <div>
+            <p style={{ display: 'inline', alignItems: 'center' }}><span>Date de création :</span> {AO.date}</p>
+            <Button
+    variant="contained"
+    color="primary"
+    size="small"
+    style={{
+      marginLeft: 10, // add some margin to separate from the label
+    }}
+  >
+    <EditIcon />
+    Edit
+  </Button>
+  </div>
+  <div>
+            <p style={{ display: 'inline', alignItems: 'center' }}><span>Prix :</span> {AO.prix} DHS</p>
+            <Button
+    variant="contained"
+    color="primary"
+    size="small"
+    style={{
+      marginLeft: 10, // add some margin to separate from the label
+    }}
+  >
+    <EditIcon />
+    Edit
+  </Button>  
+  </div>        
           </div>
         </div>
         <div className="actions">

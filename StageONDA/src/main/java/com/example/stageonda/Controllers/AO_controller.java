@@ -30,5 +30,13 @@ public class AO_controller {
     public void delete(@PathVariable Long id){
              aoServiceImp.Delete_AO_ID(id);
         }
+//        @PostMapping("/Update/{id}")
+//        public AO Add_AO(Long id){
+//            AO ao=aoServiceImp.Select_AO_ID(id).get();
+//            if(ao!=null){
+//
+//            }
+//        }
+
 
 }
