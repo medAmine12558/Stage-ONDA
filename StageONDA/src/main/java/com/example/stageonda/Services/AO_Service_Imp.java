@@ -5,6 +5,7 @@ import com.example.stageonda.Repo.AO_Repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -39,7 +40,11 @@ public class AO_Service_Imp implements AO_Service {
     }
 
     @Override
-    public void Delete_AO(AO ao) {
-        aoRepo.delete(ao);
+    public void Delete_AO_ID(Long id) {
+        aoRepo.deleteById(id);
+    }
+    @Override
+    public List<AO> SelectAll(){
+        return aoRepo.findAll();
     }
 }

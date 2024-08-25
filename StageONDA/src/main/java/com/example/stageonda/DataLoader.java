@@ -44,22 +44,22 @@ public class DataLoader implements CommandLineRunner {
 //
 ////        //Ajouter des AOs
 //        AO ao=new AO();
-//        ao.Descrip="Cette offre est l'ai la pour demmander des materilles informatique pour le securite des resaux locaux (Fire wall,Ips)";
-//        ao.Objet="Materille du securite informatique";
-//        ao.Prix= 3000.00F;
-//        LocalDate D=LocalDate.of(2024,8,22);
-//        ao.date=D;
-//        ao.utilisateur=utilisateurRepo.findById(2L).get();
+//        ao.setDescrip("Cette offre est l'ai la pour demmander des materilles industreille pour la production(Mchine X)");
+//        ao.setObjet("Materille industrielle");
+//        ao.setPrix(3000.00F) ;
+//        LocalDate D=LocalDate.of(2024,8,25);
+//        ao.setDate(D);
+//        ao.setUtilisateur(utilisateurRepo.findById(2L).get());
 //        Seance S =new Seance();
-//        S.Intitule="Z";
-//        S.Date_ouverture=LocalDate.of(2024,8,22);
+//        S.Intitule="X";
+//        S.Date_ouverture=LocalDate.of(2024,8,25);
 //        seanceRepo.save(S);
 //        Contrat c=new Contrat();
 //        c.Duree=3;
 //        c.Prix=4000.5F;
 //        contratRepo.save(c);
-//        ao.Seances=Arrays.asList(S);
-//        ao.contrat=c;
+//        ao.setSeances(Arrays.asList(S));
+//        ao.setContrat(c);
 //        aoRepo.save(ao);
 //        S.ao=ao;
 //        seanceRepo.save(S);

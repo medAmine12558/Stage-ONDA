@@ -12,6 +12,7 @@ import java.util.List;
 @Entity  @NoArgsConstructor @AllArgsConstructor
 public class AO {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter @Setter
     private Long id;
     @Getter @Setter
     private String Descrip,Objet;
@@ -23,10 +24,10 @@ public class AO {
     @ManyToOne(cascade = CascadeType.MERGE)
     @Getter @Setter
     private Utilisateur utilisateur;
-    @OneToMany(mappedBy = "ao" , cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "ao" , cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     @Getter @Setter
     private List<Seance> Seances=new ArrayList<>();
-    @OneToOne(cascade = CascadeType.MERGE)
+    @OneToOne(cascade = CascadeType.REMOVE)
     @Getter @Setter
     private Contrat contrat;
     @OneToMany(mappedBy = "ao")
