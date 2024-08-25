@@ -199,7 +199,7 @@ export default function Navbar() {
         <div >
         <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
   <p> MENU </p>
-  <a href='home'>
+  <a href='/home'>
     <i className="fa fa-user-o" aria-hidden="true"></i>
     home
   </a>

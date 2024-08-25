@@ -9,8 +9,6 @@ export function Homepage(){
         <div style={{ display: "block", paddingTop: "60px" }}>
         <Body />
         <br />
-        <Body />
-        <Body />
         </div>
         </>
     )
