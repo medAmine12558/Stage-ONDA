@@ -203,7 +203,7 @@ export default function Navbar() {
     <i className="fa fa-user-o" aria-hidden="true"></i>
     home
   </a>
-  <a>
+  <a href='/addAo'>
     <i className="fa fa-laptop" aria-hidden="true"></i>
     Ajouter une AO
   </a>
