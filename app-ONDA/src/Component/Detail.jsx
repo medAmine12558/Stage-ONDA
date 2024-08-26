@@ -14,7 +14,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import EditIcon from '@mui/icons-material/Edit';
 import { Block } from '@mui/icons-material';
-
+import DialogEdit from './DialogEdit';
 
 
 export function Detail(){
@@ -113,56 +113,20 @@ console.log(AO)
         <div className="content">
           <div className="info">
             <p style={{ display: 'inline', alignItems: 'center' }}>{AO.descrip}</p>
-            <Button
-    variant="contained"
-    color="primary"
-    size="small"
-    style={{
-      marginLeft: 10, // add some margin to separate from the label
-    }}
-  >
-    <EditIcon />
-    Edit
-  </Button>
+            <DialogEdit id={id} champs="description"></DialogEdit>
+          
+  <div>
             <p  style={{ display: 'inline', alignItems: 'center' }}><span>Objet :</span> {AO.objet}</p> 
-            <Button
-    variant="contained"
-    color="primary"
-    size="small"
-    style={{
-      marginLeft: 10, // add some margin to separate from the label
-    }}
-  >
-    <EditIcon />
-    Edit
-  </Button>
+            <DialogEdit id={id} champs="objet"></DialogEdit>
+    
+  </div>
   <div>
             <p style={{ display: 'inline', alignItems: 'center' }}><span>Date de création :</span> {AO.date}</p>
-            <Button
-    variant="contained"
-    color="primary"
-    size="small"
-    style={{
-      marginLeft: 10, // add some margin to separate from the label
-    }}
-  >
-    <EditIcon />
-    Edit
-  </Button>
+            <DialogEdit id={id} champs="date"></DialogEdit>
   </div>
   <div>
             <p style={{ display: 'inline', alignItems: 'center' }}><span>Prix :</span> {AO.prix} DHS</p>
-            <Button
-    variant="contained"
-    color="primary"
-    size="small"
-    style={{
-      marginLeft: 10, // add some margin to separate from the label
-    }}
-  >
-    <EditIcon />
-    Edit
-  </Button>  
+            <DialogEdit id={id} champs="prix"></DialogEdit>
   </div>        
           </div>
         </div>
